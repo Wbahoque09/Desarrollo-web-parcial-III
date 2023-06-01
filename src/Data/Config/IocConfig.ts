@@ -18,7 +18,6 @@ import { AuthStore } from "../Store/AuthStore";
 import AuthService from "../Services/AuthService";
 import { AdminViewModel } from "../../UI/Pages/Private/Admin/ViewModel";
 import { BookFormValidatorService } from "../Services/Validator/BookFormValidatorService";
-import { UpdateBookValidatorService } from "../Services/Validator/UpdateBookValidatorService";
 import { RegisterBookUseCase } from "../UseCases/RegisterBookUseCase";
 import { UpdateBookUseCase } from "../UseCases/UpdateBookUseCase";
 import { ListBookUseCase } from "../UseCases/ListBookUseCase";
@@ -66,10 +65,6 @@ container
 container
   .bind<BookFormValidatorService>(IocServices.BookFormValidator)
   .to(BookFormValidatorService)
-
-container
-  .bind<UpdateBookValidatorService>(IocServices.UpdateBookValidator)
-  .to(UpdateBookValidatorService)
 
 container.bind<AuthService>(IocServices.Auth).to(AuthService)
 
